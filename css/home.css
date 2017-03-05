@@ -1,0 +1,153 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.active-button{
+	border-bottom-color: white;
+}
+
+.navbar{
+	position: fixed;
+	color: white;
+	border-bottom: 3px solid white;
+	background-color: none;
+	text-decoration: none;
+	z-index: 50;
+	
+}
+
+.navbar li{
+	font-size: 1.5em;
+}
+
+.active-nav{
+	border:1px solid white;
+}
+
+#introduction{
+	position: fixed;
+	background-image: url(../image/volunteer_intro.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	height: 700px;
+
+}
+
+#introduction p{
+	color: white;
+	position: relative;
+	top: 75%;
+	font-size: 2em;
+	
+}
+
+.section{
+	height: 550px;
+}
+
+.panel-body{
+	margin-top: 30px;
+}
+
+.panel-body p{
+	font-size: 1.5em;
+}
+
+#search{
+	margin-top: 700px;
+	background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+#search img{
+	position: relative;
+	top: 10%;
+	left: 20%;
+}
+
+#search h1, #search p{
+	position: relative;
+	color: #330867;
+}
+
+.search_button{
+	position: relative;
+	top: 35%;
+	
+}
+
+.btn-search{
+	background-color: #330867;
+	border: #5E0EBE;
+	text-decoration: none;
+    font-weight: normal;
+	color: white; 
+	width: 150px;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	
+}
+
+.btn-search:hover{
+	color:#DEC8FA;
+}
+
+#publish{
+	background-image: url(../image/publish.gif);
+	background-blend-mode: darken;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	z-index: 0;
+	
+}
+
+#publish h1{
+	color: white;
+	font-weight: bold;
+	z-index: 10;
+	position: relative;
+	top:30%;
+}
+
+
+.btn-publish{
+	position: relative;
+	top: 300px;
+	text-decoration: none;
+    font-weight: normal;
+	color: white; 
+	width: 130px;
+	border: 1px solid white;
+	border-radius: 4px;
+	
+	
+}
+
+.btn-publish:hover{
+	color: #D4D4D4;
+	
+	
+}
+
+
+#mapintro {
+	background: white;
+	padding-top: 5%;
+	height: 300px;
+}
+
+.seperate{
+	background-color: white;
+	height: 1px;
+	margin:auto;
+}
+
+
+footer{
+	background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+	height: 250px;
+	color: white;
+	text-align: center;
+	padding-top: 5%;
+}
