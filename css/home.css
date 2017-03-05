@@ -1,17 +1,27 @@
 @charset "UTF-8";
 /* CSS Document */
 
+.active-button{
+	border-bottom-color: white;
+}
+
 .navbar{
 	position: fixed;
-	top:0px;
 	color: white;
-	border-bottom: 1px solid white;
+	border-bottom: 3px solid white;
 	background-color: none;
 	text-decoration: none;
 	z-index: 50;
 	
 }
 
+.navbar li{
+	font-size: 1.5em;
+}
+
+.active-nav{
+	border:1px solid white;
+}
 
 #introduction{
 	position: fixed;
@@ -36,6 +46,14 @@
 	height: 550px;
 }
 
+.panel-body{
+	margin-top: 30px;
+}
+
+.panel-body p{
+	font-size: 1.5em;
+}
+
 #search{
 	margin-top: 700px;
 	background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
@@ -43,13 +61,12 @@
 
 #search img{
 	position: relative;
-	top: 25%;
+	top: 10%;
 	left: 20%;
 }
 
-#search h1{
+#search h1, #search p{
 	position: relative;
-	top: 14%;
 	color: #330867;
 }
 
@@ -66,6 +83,8 @@
     font-weight: normal;
 	color: white; 
 	width: 150px;
+	margin-top: 30px;
+	margin-bottom: 20px;
 	
 }
 
@@ -109,6 +128,13 @@
 	
 	
 }
+
+.seperate{
+	background-color: white;
+	height: 1px;
+	margin:auto;
+}
+
 
 footer{
 	background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);

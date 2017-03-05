@@ -17,16 +17,16 @@
 <body>
 	 
 	 <!--Navigation -->
-	 <nav class="navbar navbar-default navbar-inverse text-center">
-  		
-			<div class="navbar1 text-center col-lg-12">
+	 <nav class=" navbar-default navbar-inverse">
+  		<div class="container-fluid"> 
+			<div class="navbar text-center col-lg-12">
 				<ul class="nav navbar-nav text-center">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Search</a> </li>
-					<li><a href="#">Publish</a> </li>
+					<li class="active-nav"><a  href="#">Home</a></li>
+					<li><a href="#search">Search</a> </li>
+					<li><a href="#publish">Publish</a> </li>
 				</ul>
 			</div>
-		
+		</div>
 	</nav>
 	
 	<!-- Content-->
@@ -40,21 +40,48 @@
 			<div id="search" class="col-sm-12 col-md-12 col-lg-12 text-center section">
 				<img class="img-responsive" src="../image/search.png">
 				<h1>Search for volunteer opportunities</h1>
-				<div class="row search_button">
-					<div class="col-sm-12 col-md-6 col-lg-3">
-						<p><a class="btn btn-lg btn-search">Name</a></p>
+				<div class="row">
+					<div class="panel-body">
+	  					<div class="form-group">
+    						<form action="" method="post">
+       						<div class="col-md-6">
+								<p><strong>Size:</strong></p>
+								<select class="form-control text-center" name="size">
+									<option value="small">Small</option>
+									<option value="big">Big</option>
+								</select>
+							</div>
+       						
+       						<div class="col-md-6">
+			  				<p><strong>Location:</strong></p>
+		  					<input type="text" class="form-control" name="lastname" required>
+		  					</div>
+		  					
+							</form>
+						</div>
 					</div>
-					<div class="col-sm-12 col-md-6 col-lg-3">
-						<p><a  class="btn btn-lg btn-search">Size</a></p>
-					</div>
-					<div class="col-sm-12 col-md-6 col-lg-3">
-						<p><a  class="btn btn-lg btn-search">Location</a></p>
-					</div>
-					<div class="col-sm-12 col-md-6 col-lg-3">
-						<p><a class="btn btn-lg btn-search">Random</a></p>
-					</div>
+						
+							<div class="col-sm-12 col-md-12 col-lg-12">
+								<p><a class="btn btn-lg btn-search">Search</a></p>
+							</div>
+							
+							<div class="col-md-3"></div>
+							<div class="col-md-6 seperate"></div>
+							<div class="col-md-3"></div>
+							
+							
+							<div class="col-md-12">
+							
+								<p id="alternate">or<br>If you are open to anything! :D </p>		
+							</div>	
+
+							<div class="col-sm-12 col-md-12 col-lg-12">
+								<p><a class="btn btn-lg btn-search btn-random">Random</a></p>
+							</div>
+				
 				</div>
 			</div>
+			
 			
 			<div id="publish" class="col-sm-12 col-md-12 col-lg-12 text-center section">
 				<h1>Post New Volunteer Opportunities</h1>
