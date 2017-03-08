@@ -1,0 +1,323 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Voluntr</title>
+
+<!--Bootstrap -->
+<link rel="stylesheet" href="bootstrap.css">
+
+<!--Google Fonts-->
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Merriweather|Quicksand|Lobster" rel="stylesheet">
+
+<link rel="stylesheet" href="home.css">
+
+<!-- jquery -->
+<script src="js/jquery-1.11.3.min.js"></script>
+
+</head>
+
+<body>
+	 
+	 <!--Navigation -->
+	 <nav class=" navbar-default navbar-inverse">
+  		<div class="container-fluid"> 
+			<div class="navbar text-center col-lg-12">
+				<ul class="nav navbar-nav text-center">
+					<li><a  href="#">Home</a></li>
+					<li><a href="#search">Search</a> </li>
+					<li><a href="#publish">Publish</a> </li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+	<!-- Content-->
+	<div class="container-fluid">
+		<div class="row">
+			<div id="introduction" class="col-sm-12 col-md-12 col-lg-12 text-center">
+				<h2 id="title">Voluntr</h2>
+				<p>We provide all the information about volunteer opportunities in San Jose. Find your most desirable volunteer opportunity.</p>
+			</div>
+			
+			
+			<div id="search" class="col-sm-12 col-md-12 col-lg-12 text-center section">
+				<img class="img-responsive" src="image/search.png">
+				<p id="changing">
+					<h2 class="quotes">Inspire</h2>
+					<h2 class="quotes">Volunteer</h2>
+					<h2 class="quotes">Grow</h2>
+				</p>
+				
+				<script>
+					
+					(function() {
+						
+						    var quotes = $(".quotes");
+						    var quoteIndex = -1;
+						    
+						    function showNextQuote() {
+						        ++quoteIndex;
+						        quotes.eq(quoteIndex % quotes.length)
+						            .fadeIn(2000)
+						            .delay(1500)
+						            .fadeOut(2000, showNextQuote);
+						    }
+						    
+						    showNextQuote();
+						    
+						})();
+					
+				</script>
+				
+				
+				<h1 class="t">Search for volunteer opportunities</h1>
+				<div class="row">
+					<div class="panel-body">
+	  					<div class="form-group">
+    						<form action="search_result1.php" method="post">
+       						<div class="col-md-6">
+								<p><strong>Size:</strong></p>
+								<select class="form-control text-center" name="size">
+									<option value="small">Small</option>
+									<option value="big">Big</option>
+								</select>
+							</div>
+       						
+       						<div class="col-md-6">
+			  				<p><strong>Location:</strong></p>
+		  					<input type="text" class="form-control" name="address" >
+		  					</div>
+		  					<div class="col-sm-12 col-md-12 col-lg-12">
+									<p><input type = "submit" class="btn btn-lg btn-search" value='Search'></p>
+								</div>
+							</form>
+						</div>
+					</div>
+						
+					
+					
+					<div class="col-md-3"></div>
+					<div class="col-md-6 seperate"></div>
+					<div class="col-md-3"></div>
+					
+					
+					<div class="col-md-12">
+					
+						<p id="alternate">or<br>If you are open to anything! :D </p>		
+					</div>	
+
+					<div class="col-sm-12 col-md-12 col-lg-12">
+						<p><a class="btn btn-lg btn-search btn-random">Random</a></p>
+					</div>
+				
+				</div>
+			</div>
+			
+			
+			<div id="publish" class="col-sm-12 col-md-12 col-lg-12 text-center section">
+				<h1 class="t">Organizations - Post New Volunteer Opportunities</h1>
+				<p><a href="publish.html" class="btn btn-lg btn-publish">Join</a></p>
+		    </div>
+		    
+		    
+		    <div id="mapintro" class="col-sm-12 col-md-12 col-lg-12 text-center section">
+		    	<h1 class="t">Check out the map below to see what opportunities are near you!</h1>
+		    </div>
+			
+			<div id="map" class="col-sm-12 col-md-12 col-lg-12 text-center section">
+			
+				<script>
+					
+			    		 // When the user clicks the marker, an info window opens.
+							
+			      		function initMap() {
+			      				// initialization
+			      				var init = { lat: -34.397, lng: 150.644 };
+			      				var map = new google.maps.Map(document.getElementById('map'), {
+					          				zoom: 10,
+					          				center: init
+			        		    });
+			        		    
+			        		    
+			        		    // hp
+			        		    var hp = { lat: 37.414562, lng:-122.146289 };
+			        
+			        		    var marker = new google.maps.Marker({
+			          				  position: hp,
+								      map: map,
+								      title: 'Hewlett Packard'
+							   	});
+			      				
+			      				var contentString = 
+						            '<p><b>Hewlett Packard</b></p>'
+			
+					              var infowindow = new google.maps.InfoWindow({
+					                content: contentString
+					              });
+					        			
+					        	
+								marker.addListener('click', function() {
+				                  infowindow.open(map, marker);
+				                });
+				                
+					             
+					       
+			      				// 1books
+			      				var books = { lat: 37.473165, lng: -122.152089 };
+					             var marker3 = new google.maps.Marker({
+			          				  position: books,
+								      map: map,
+								      title: '10 Books'
+							   	});
+			      				
+			      				var contentString3 = 
+						            '<p><b>10 Books A Home</b></p>'
+			
+					              var infowindow3 = new google.maps.InfoWindow({
+					                content: contentString3
+					              });
+					        			
+					        			
+								marker3.addListener('click', function() {
+				                  infowindow3.open(map, marker3);
+				                });
+			      			
+			      				// 550 Bell St.East Palo Alto, CA94303
+			      				var ymca= { lat:37.465069, lng:-122.142493 };
+			      				var marker4 = new google.maps.Marker({
+			          				  position: ymca,
+								      map: map,
+								      title: 'YMCA'
+							   	});
+							   	
+			      				var contentString4 = 
+						            '<p><b>YMCA</b></p>'
+			
+					              var infowindow4 = new google.maps.InfoWindow({
+					                content: contentString4
+					              });
+					        			
+					        			
+								marker4.addListener('click', function() {
+				                  infowindow4.open(map, marker4);
+				                });
+			      			
+			      			    // 3373 Hillview AvePalo Alto, CA94304
+			      			    var stanf= { lat:37.405971, lng:-122.144813 };
+			      				var marker5 = new google.maps.Marker({
+			          				  position: stanf,
+								      map: map,
+								      title: 'stanfb'
+							   	});
+							   	
+			      				var contentString5 = 
+						            '<p><b>Stanford Blood Center</b></p>'
+			
+					              var infowindow5 = new google.maps.InfoWindow({
+					                content: contentString5
+					              });
+					        			
+					        			
+								marker5.addListener('click', function() {
+				                  infowindow5.open(map, marker5);
+				                });
+				                
+				                // umb
+				                var umb = { lat: 37.335848, lng: -121.891999 };
+					             var marker6 = new google.maps.Marker({
+			          				  position: umb,
+								      map: map,
+								      title: 'Umbrella Salon'
+							   	});
+			      				
+			      				var contentString6 = 
+						            '<p><b>Umbrella Salon</b></p>'
+			
+					              var infowindow6 = new google.maps.InfoWindow({
+					                content: contentString6
+					              });
+					        			
+					        			
+								marker6.addListener('click', function() {
+				                  infowindow6.open(map, marker6);
+				                });
+				                
+				                // scu
+				                var scu = { lat: 37.349952, lng: -121.940608 };
+					             var marker7 = new google.maps.Marker({
+			          				  position: scu,
+								      map: map,
+								      title: 'Santa Clara University'
+							   	});
+			      				
+			      				var contentString7 = 
+						            '<p><b>Santa Clara University</b></p>'
+			
+					              var infowindow7 = new google.maps.InfoWindow({
+					                content: contentString7
+					              });
+					        			
+					        			
+								marker7.addListener('click', function() {
+				                  infowindow7.open(map, marker7);
+				                });
+				                
+				                // 
+			      			
+			      			
+			        			// geolocator
+			        			if (navigator.geolocation) {
+						          navigator.geolocation.getCurrentPosition(function(position) {
+						            var pos = {
+						              lat: position.coords.latitude,
+						              lng: position.coords.longitude
+						            };
+						            
+						            // var infoWindow = new google.maps.InfoWindow({map: map});
+						
+						            // infoWindow.setPosition(pos);
+						            // infoWindow.setContent('You are here.');
+						            map.setCenter(pos);
+						          }, function() {
+						            	handleLocationError(true, infoWindow, map.getCenter());
+						            });
+						        } else {
+						          // Browser doesn't support Geolocation
+						          handleLocationError(false, infoWindow, map.getCenter());
+						        }
+						      
+			
+						      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+						        infoWindow.setPosition(pos);
+						        infoWindow.setContent(browserHasGeolocation ?
+						                              'Error: The Geolocation service failed.' :
+						                              'Error: Your browser doesn\'t support geolocation.');
+						      }
+			
+			                
+							      	
+						}
+							    
+			    </script>
+			    
+		    	<!--Google Maps API-->
+				<script async defer
+				src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBffQGkjsIOgMJoqnbbQR_o6WE5OXRccMo&callback=initMap">
+				</script>
+				
+				<!--Google Maps geolocation marker-->
+				<script src="js/geolocation-marker.js"></script>		
+			   
+			</div>				
+		</div>	
+	</div>
+	
+	
+	<footer id="footer" class="col-sm-12 col-md-12 col-lg-12">
+		<h2 class="t">Volunteer today!</h2>
+	</footer>
+</body>
+</html>
