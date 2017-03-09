@@ -7,15 +7,15 @@
 <title>Voluntr</title>
 
 <!--Bootstrap -->
-<link rel="stylesheet" href="../css/bootstrap.css">
+<link rel="stylesheet" href="bootstrap.css">
 
 <!--Google Fonts-->
 <link href="https://fonts.googleapis.com/css?family=Inconsolata|Merriweather|Quicksand|Lobster" rel="stylesheet">
 
-<link rel="stylesheet" href="../css/home.css">
+<link rel="stylesheet" href="home.css">
 
 <!-- jquery -->
-<script src="../js/jquery-1.11.3.min.js"></script>
+<script src="js/jquery-1.11.3.min.js"></script>
 
 </head>
 
@@ -44,7 +44,7 @@
 			
 			
 			<div id="search" class="col-sm-12 col-md-12 col-lg-12 text-center section">
-				<img class="img-responsive" src="../image/search.png">
+				<img class="img-responsive" src="image/search.png">
 				<p id="changing">
 					<h2 class="quotes">Inspire</h2>
 					<h2 class="quotes">Volunteer</h2>
@@ -77,7 +77,7 @@
 				<div class="row">
 					<div class="panel-body">
 	  					<div class="form-group">
-    						<form action="" method="post">
+    						<form action="search_result1.php" method="post">
        						<div class="col-md-6">
 								<p><strong>Size:</strong></p>
 								<select class="form-control text-center" name="size">
@@ -88,16 +88,16 @@
        						
        						<div class="col-md-6">
 			  				<p><strong>Location:</strong></p>
-		  					<input type="text" class="form-control" name="lastname" required>
+		  					<input type="text" class="form-control" name="address" >
 		  					</div>
-		  					
+		  					<div class="col-sm-12 col-md-12 col-lg-12">
+									<p><input type = "submit" class="btn btn-lg btn-search" value='Search'></p>
+								</div>
 							</form>
 						</div>
 					</div>
 						
-					<div class="col-sm-12 col-md-12 col-lg-12">
-						<p><a class="btn btn-lg btn-search">Search</a></p>
-					</div>
+					
 					
 					<div class="col-md-3"></div>
 					<div class="col-md-6 seperate"></div>
@@ -119,7 +119,7 @@
 			
 			<div id="publish" class="col-sm-12 col-md-12 col-lg-12 text-center section">
 				<h1 class="t">Organizations - Post New Volunteer Opportunities</h1>
-				<p><a class="btn btn-lg btn-publish">Join</a></p>
+				<p><a href="publish.html" class="btn btn-lg btn-publish">Join</a></p>
 		    </div>
 		    
 		    
@@ -309,7 +309,7 @@
 				</script>
 				
 				<!--Google Maps geolocation marker-->
-				<script src="../js/geolocation-marker.js"></script>		
+				<script src="js/geolocation-marker.js"></script>		
 			   
 			</div>				
 		</div>	

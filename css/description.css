@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/* CSS Document */
+
+h1,p{
+	color: white;
+}
+
+p{
+	font-size:1.5em;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+body{
+	position:relative;
+	height:700px;
+	background-image: linear-gradient(to top, #9795f0 0%, #fbc8d4 100%);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
